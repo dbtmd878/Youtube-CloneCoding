@@ -11,7 +11,7 @@ const App = (props) => {
     };
 
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?key=AIzaSyCNyged456xrxPXXAwmA-BLInpG39104C8&part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyCNyged456xrxPXXAwmA-BLInpG39104C8",
+      "https://youtube.googleapis.com/youtube/v3/videos?key=AIzaSyBRP3CLzJxa5BO9bnhoMeP0Jdw3trs4GXk&part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBRP3CLzJxa5BO9bnhoMeP0Jdw3trs4GXk",
       requestOptions
     )
       .then((response) => response.json())
@@ -19,11 +19,7 @@ const App = (props) => {
       .catch((error) => console.log("error", error));
   });
 
-  return (
-    <div>
-      <VideoList videos={videos} key={videos.id} />
-    </div>
-  );
+  return <VideoList videos={videos} />;
 };
 
 export default App;
