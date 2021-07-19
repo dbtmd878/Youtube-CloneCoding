@@ -2,11 +2,15 @@ import React from "react";
 import VideoItem from "../video_item/video_item";
 import styles from "./video_list.module.css";
 
-const VideoList = (props) => (
-  <ul className={styles.video}>
-    {console.log(props.videos)}
-    {props.videos.map((video) => (
-      <VideoItem key={video.id} video={video} />
+const VideoList = ({ videos, onselect, display }) => (
+  <ul className={styles.videos}>
+    {videos.map((video) => (
+      <VideoItem
+        key={video.id}
+        video={video}
+        onselect={onselect}
+        display={display}
+      />
     ))}
   </ul>
 );
