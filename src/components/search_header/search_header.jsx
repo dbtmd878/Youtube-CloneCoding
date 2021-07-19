@@ -18,11 +18,7 @@ const SearchHeader = ({ onSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img
-          className={styles.img}
-          src="/youtube-clonecoding/images/logo.png"
-          alt="logo"
-        />
+        <img className={styles.img} src="/images/logo.png" alt="logo" />
         <h1 className={styles.title}>YouTube</h1>
       </div>
       <input
@@ -33,11 +29,7 @@ const SearchHeader = ({ onSearch }) => {
         onKeyPress={textArea}
       />
       <button className={styles.btn} type="submit" onClick={searchBtn}>
-        <img
-          className={styles.btnImg}
-          src="/youtube-clonecoding/images/search.png"
-          alt=""
-        />
+        <img className={styles.btnImg} src="/images/search.png" alt="" />
       </button>
     </header>
   );
